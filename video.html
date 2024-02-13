@@ -6,31 +6,44 @@
     <title>Hapi hapi hapi</title>
     <link rel="stylesheet" href="styles.css">
     <style>
-        #video-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            position: relative;
-        }
+       #video-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    position: relative;
+}
 
-        video {
-            width: 600px;
-            height: 600px;
-        }
+video {
+    max-width: 100%; /* Adjusted to be responsive */
+    height: auto; /* Maintain aspect ratio */
+}
 
-        #heart {
-            font-size: 48px; /* Adjust font size as needed */
-            position: absolute;
-            bottom: 40px; /* Adjust vertical position */
-            left: 50%;
-            transform: translateX(-50%);
-            padding-bottom: 200px;
-        }
-        body {
-            font-family: 'Comic Sans MS', cursive;
-        }
+#heart {
+    font-size: 48px; /* Adjust font size as needed */
+    position: absolute;
+    bottom: 40px; /* Adjust vertical position */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+body {
+    font-family: 'Comic Sans MS', cursive;
+}
+
+/* Media Query for Mobile */
+@media only screen and (max-width: 600px) {
+    video {
+        width: 100%; /* Adjusted for mobile devices */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    #heart {
+        font-size: 24px; /* Adjust font size for smaller screens */
+        bottom: 20px; /* Adjust vertical position for smaller screens */
+    }
+}
     </style>
 </head>
 <body>
